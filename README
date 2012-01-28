@@ -1,0 +1,6 @@
+NCR (or No Click Rip) is a software utility that allows a machine to automatically rip a DVD to ISO or MP4 (via HandBrake) when inserted. It was created using C# and VS2010 and depends on several utilites including:
+
+AnyDVD (6.6 or greater) 
+HandBrake (0.9 or greater) 
+DVDXML.com Account 
+.NET 3.5 or greater 
