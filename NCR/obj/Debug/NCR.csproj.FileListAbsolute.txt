@@ -1,0 +1,14 @@
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\bin\Debug\NCR.exe.config
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\obj\Debug\NCR.frmMain.resources
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\obj\Debug\NCR.frmQueryDVD.resources
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\obj\Debug\NCR.Properties.Resources.resources
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\obj\Debug\ResGen.read.1.tlog
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\obj\Debug\ResGen.write.1.tlog
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\bin\Debug\NCR.exe
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\bin\Debug\NCR.pdb
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\bin\Debug\Iso9660.dll
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\bin\Debug\Iso9660.pdb
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\bin\Debug\SeriousBit.Licensing.xml
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\obj\Debug\NCR.exe
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\obj\Debug\NCR.pdb

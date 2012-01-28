@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SeriousBit.Licensing</name>
+    </assembly>
+    <members>
+        <member name="T:SeriousBit.Licensing.UsageBomb"><summary>
+            Provides functionality for uses count limited trial application
+            </summary></member>
+        <member name="M:SeriousBit.Licensing.UsageBomb.#ctor(System.Int32,System.Boolean,System.Guid)"><summary>
+            Constructor
+            </summary><param name="maxUsage">Maximum usage count</param><param name="countUsageOncePerDay">If true then usage will be counted only once per day</param><param name="productID">Used to store bomb records uniquely</param></member>
+        <member name="M:SeriousBit.Licensing.UsageBomb.Load"><summary>
+            Reads and evaluates bomb's records, but doesn't save them
+            </summary></member>
+        <member name="M:SeriousBit.Licensing.UsageBomb.Update"><summary>
+            Reads, evaluates and saves bomb records
+            </summary></member>
+        <member name="M:SeriousBit.Licensing.UsageBomb.Reset"><summary>
+            Removes all bomb records and resets State property to NonStarted
+            </summary></member>
+        <member name="M:SeriousBit.Licensing.UsageBomb.Save"><summary>
+            Saves bomb records
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.UsageBomb.StartDate"><summary>
+            Gets and sets first run date
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.UsageBomb.LastRun"><summary>
+            Returns the date of previous bomb run
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.UsageBomb.CountUsageOncePerDay"><summary>
+            If true then usage will be counted only once per day
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.UsageBomb.UsageLeft"><summary>
+            Gets the amount of uses left
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.UsageBomb.IsExpired"><summary>
+            Gets and sets a value indicating whether the trial is expired or not
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.UsageBomb.IsStarted"><summary>
+            Gets a value indicating whether the bomb is started or not. 
+            The bomb starts after first Update() call
+            and can become non-started after Reset() call
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.UsageBomb.IsHacked"><summary>
+            Returns 'true' when users attempts to hack the bomb by reverting system time and CountUsageOncePerDay is set to 'true' 
+            If IsHacked is true then IsExpired is also true.
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.UsageBomb.IsTrialActive"><summary>
+            Returns true if the current usage count is less than trial maximum.
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.UsageBomb.UsageCount"><summary>
+            Gets the count of bomb uses
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.UsageBomb.State"><summary>
+            Gets bomb's current state
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.UsageBomb.MaxUsage"><summary>
+            Gets maximum usage count
+            </summary></member>
+        <member name="T:SeriousBit.Licensing.SerialsManager"><summary>
+            Creates and verifies serials based on asymmetric elliptic curves cryptography
+            </summary></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.#ctor"><summary>
+            Constructor
+            </summary></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.#ctor(System.String,System.String)"><summary>
+            Contructor
+            </summary><param name="developerSerial">Key provided by SeriousBit, to get one for free go to our site
+            Whithout this key SerialsManager wouldn't work properly
+            </param><param name="developerName">Developer's name</param></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.CreatePrivatePublicKeys"><summary>
+            Creates public and private keys and puts them in PublikKey and PrivateKey properties
+            </summary></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.CreateSerial"><summary>
+            Creates a serial with random ID
+            </summary></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.CreateSerial(System.Int64)"><summary>
+            Creates a serial
+            </summary><param name="ID">Serial's order number. Serials created with the same ID and Private Key are identical</param></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.CreateSerial(System.Int64,System.String)"><summary>
+            Creates a serial
+            </summary><param name="ID">A positive order number. Serials created with the same ID and Private Key are identical</param><param name="productInfo">Any string which will be included into serial. Maximum length allowed is 13 chars</param></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.CreateSerial(System.Int64,System.DateTime,System.String)"><summary>
+            Creates a serial
+            </summary><param name="ID">A positive order number. Serials created with the same ID and Private Key are identical</param><param name="expirationDate">The date until which the serial us valid</param><param name="productInfo">Any string which will be included into serial. Maximum length allowed is 13 chars</param><returns></returns></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.CreateSerials(System.Int64,System.Int64,System.String)"><summary>
+            Creates a serial
+            </summary><param name="startID">ID from which the serial generation will be started</param><param name="endID">ID at which the serial generation will be ended. Must be biger than startID</param><param name="productInfo">Any string which will be included into serial. Maximum length allowed is 13 chars</param></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.CreateSerials(System.Int64,System.Int64,System.DateTime,System.String)"><summary>
+            Creates a serial
+            </summary><param name="startID">ID from which the serial generation will be started</param><param name="endID">ID at which the serial generation will be ended. Must be biger than startID</param><param name="expDate">Expiration date</param><param name="productInfo">Any string which will be included into serial. Maximum length allowed is 13 chars</param></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.IsValid(System.String)"><summary>
+            Returns true if the serial is valid when verified with current public key
+            </summary><param name="serial">Base33 string with serial</param><returns></returns></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.GetID(System.String)"><summary>
+            Return the ID of serial
+            </summary><param name="serial"></param><returns></returns></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.GetInfo(System.String)"><summary>
+            Returns product information from serial. If no information is present in this serial then returns null
+            </summary><param name="serial"></param><returns></returns></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.HasExpirationDate(System.String)"><summary>
+            Returns true if serial has expiration date embedded
+            </summary><param name="serial"></param><returns></returns></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.GetExpirationDate(System.String)"><summary>
+            Returns expiration date from serial. If no expiration date is present in this serial then returns DateTime.MaxValue
+            </summary><param name="serial"></param><returns></returns></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.HasInfoField(System.String)"><summary>
+            If serial has product information then returns true
+            </summary><param name="serial"></param><returns></returns></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.StopCreatingSerials"><summary>
+            Stops SerialManager from creating serials
+            </summary></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.GetCPUID"><summary>
+            Returns ID of this computer's CPU
+            </summary></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.RegisterDeveloper(System.String,System.String)"><summary>
+            For internal use only
+            </summary><param name="devName"></param><param name="devSerial"></param><returns></returns></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.OnSerialCreated(System.String,System.Int64,System.String)"><summary>
+            Fires SerialCreated event
+            </summary><param name="serial"></param><param name="id"></param><param name="productInfo"></param></member>
+        <member name="M:SeriousBit.Licensing.SerialsManager.IsDeveloperRegistered"><summary>
+            For internal use only
+            </summary><returns></returns></member>
+        <member name="P:SeriousBit.Licensing.SerialsManager.PrivateKey"><summary>
+            Base32 string used to create serials.
+            Must be generated by Ellipter programatically or by GUI.
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.SerialsManager.PublicKey"><summary>
+            Base32 string used to verify serials.
+            Must be generated by Ellipter programatically or by GUI.
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.SerialsManager.DeveloperSerial"><summary>
+            Key provided by SeriousBit, to get one for free go to our site
+            Whithout this key SerialsManager wouldn't work properly
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.SerialsManager.DeveloperName"><summary>
+            Developer name on whom this component is registered
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.SerialsManager.BlackList"><summary>
+            List of IDs of serials which are blacklisted.
+            For a blacklisted serial method IsValid() will always return false.
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.SerialsManager.MinExpirationDate"><summary>
+            Gets minimal expiration date possible for a serial
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.SerialsManager.MaxExpirationDate"><summary>
+            Gets maximal expiration date possible for a serial
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.SerialsManager.LibraryVersion"><summary>
+            Returns the version of this library
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.SerialsManager.IsCreatingSerials"><summary>
+            If SerialsManger is creating serials at the moment then returns true
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.SerialsManager.IsMono"><summary>
+            Returns true if program is currently running under Mono Runtime
+            </summary></member>
+        <member name="T:SeriousBit.Licensing.HackedReason"><summary>
+            Describes the reason a TimeBomb is considered hacked. For debug purpose.
+            </summary></member>
+        <member name="T:SeriousBit.Licensing.ChecksumCalculator"><summary>
+            Calculates cyclic redundancy check codes
+            </summary></member>
+        <member name="M:SeriousBit.Licensing.ChecksumCalculator.ComputeChecksum(System.Byte[])"><summary>
+            Computes a CRC from an array of bytes and returns an ushort
+            </summary><param name="bytes"></param><returns></returns></member>
+        <member name="M:SeriousBit.Licensing.ChecksumCalculator.ComputeChecksumToByteArray(System.Byte[])"><summary>
+            Computes a CRC from an array of bytes and returns a byte array
+            </summary><param name="bytes"></param><returns></returns></member>
+        <member name="M:SeriousBit.Licensing.ChecksumCalculator.ComputeChecksum(System.String)"><summary>
+            Computes a CRC from a string
+            </summary><param name="data"></param><returns></returns></member>
+        <member name="T:SeriousBit.Licensing.TimeBomb"><summary>
+            Provides functionality for time limited trial application
+            </summary></member>
+        <member name="M:SeriousBit.Licensing.TimeBomb.#ctor(System.Int32,System.Guid)"><summary>
+            Constructor
+            </summary><param name="trialLength">The length, in days, of trial period</param><param name="productID">Used to store bomb records uniquely</param></member>
+        <member name="M:SeriousBit.Licensing.TimeBomb.Update"><summary>
+            Reads, updates and saves bomb records
+            </summary></member>
+        <member name="M:SeriousBit.Licensing.TimeBomb.Save"><summary>
+            Saves bomb records
+            </summary></member>
+        <member name="M:SeriousBit.Licensing.TimeBomb.Reset"><summary>
+            Removes all bomb records and resets State property to NonStarted
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.TimeBomb.StartDate"><summary>
+            Gets and sets first run date
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.TimeBomb.IsExpired"><summary>
+            Gets and sets a value indicating whether the trial is expired or not
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.TimeBomb.TrialLength"><summary>
+            Gets trial length in days
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.TimeBomb.DaysLeft"><summary>
+            Gets the number of days left until the bomb expires
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.TimeBomb.EndDate"><summary>
+            Gets the date of last trial day
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.TimeBomb.IsStarted"><summary>
+            Gets a value indicating whether the bomb is started or not. 
+            The bomb starts after first Update() call
+            and can become non-started after Reset() call
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.TimeBomb.IsHacked"><summary>
+            Returns 'true' when users attempts to hack the bomb by reverting system time. 
+            If IsHacked is true then IsExpired is also true.
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.TimeBomb.HackedReason"><summary>
+            Returns the reason a TimeBomb's state was set to Hacked. For debug purpose.
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.TimeBomb.IsTrialActive"><summary>
+            Returns true if the current date is within limits of trial.
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.TimeBomb.LastRun"><summary>
+            Returns the date of previous Update() call (usualy the same as last application run)
+            </summary></member>
+        <member name="P:SeriousBit.Licensing.TimeBomb.State"><summary>
+            Gets bomb's current state
+            </summary></member>
+        <member name="T:SeriousBit.Licensing.BombState"><summary>
+            Describes TimeBomb object's state
+            </summary></member>
+        
+    </members>
+</doc>
+
