@@ -120,7 +120,6 @@
             this.settingsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.startNoClickRipToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.smSerials = new SeriousBit.Licensing.SerialsManager();
             this.timerHide = new System.Windows.Forms.Timer(this.components);
             this.label21 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
@@ -1078,13 +1077,6 @@
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // smSerials
-            // 
-            this.smSerials.DeveloperName = "Joe Gennari";
-            this.smSerials.DeveloperSerial = "BM3CTR-BW59JS-KVBWVW-CB2W21-1QE5A";
-            this.smSerials.PrivateKey = "E4S37EK4WH33NGRMFUZDYYZ";
-            this.smSerials.PublicKey = "WEMWNJ64PQDKBRS74RQHRGDRHGT97F93UZUBUMK5BFDPYXA";
-            // 
             // timerHide
             // 
             this.timerHide.Tick += new System.EventHandler(this.timerHide_Tick);
@@ -1238,7 +1230,6 @@
         private System.Windows.Forms.ToolStripMenuItem startNoClickRipToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.CheckBox cbCleanUp;
-        private SeriousBit.Licensing.SerialsManager smSerials;
         private System.Windows.Forms.Timer timerHide;
         private System.Windows.Forms.Label lblArgs;
         private System.Windows.Forms.CheckBox cbOpenWithWindows;

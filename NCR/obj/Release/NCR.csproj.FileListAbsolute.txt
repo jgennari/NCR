@@ -1,0 +1,13 @@
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\bin\Release\NCR.exe.config
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\obj\Release\ResolveAssemblyReference.cache
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\obj\Release\NCR.frmMain.resources
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\obj\Release\NCR.frmQueryDVD.resources
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\obj\Release\NCR.Properties.Resources.resources
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\obj\Release\ResGen.read.1.tlog
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\obj\Release\ResGen.write.1.tlog
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\bin\Release\NCR.exe
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\bin\Release\NCR.pdb
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\bin\Release\DirectShowLib-2005.dll
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\bin\Release\Iso9660.dll
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\obj\Release\NCR.exe
+C:\Users\jmg01\Dropbox\Source\PTA\NCR\NCR\NCR\obj\Release\NCR.pdb
